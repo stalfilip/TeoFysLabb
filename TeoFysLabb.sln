@@ -5,13 +5,6 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TeoFysLabb", "TeoFysLabb\TeoFysLabb.pyproj", "{83025986-16BE-4F49-8847-4F6979389293}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C639C513-CD80-4890-9D2F-5216745622E7}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\Users\filip\Downloads\diagonalize.py = ..\..\Users\filip\Downloads\diagonalize.py
-		..\..\Users\filip\Downloads\eigenstates.py = ..\..\Users\filip\Downloads\eigenstates.py
-		..\..\Users\filip\Downloads\splitoperator.py = ..\..\Users\filip\Downloads\splitoperator.py
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
