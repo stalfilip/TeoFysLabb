@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>83025986-16be-4f49-8847-4f6979389293</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TeoFysLabb.py</StartupFile>
+    <StartupFile>eigenstates.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
