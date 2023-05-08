@@ -8,7 +8,7 @@ import numpy as np
 from numpy import linalg as LA
 from matplotlib import pyplot as plt
 
-dim = 10 # truncated dimension of Hilbert space
+dim = 60 # truncated dimension of Hilbert space
 
 def delta(m,n):
     d = 0
@@ -23,28 +23,34 @@ def pm(m,n):
 
 x = np.zeros(dim*dim, dtype=complex).reshape(dim, dim)
 p = np.zeros(dim*dim, dtype=complex).reshape(dim, dim)
+
 for i in range(dim):
     for j in range(dim):
         x[i,j] = xm(i,j)
         p[i,j] = pm(i,j)
 x2 = x.dot(x)
 p2 = p.dot(p)
+x4 = x2.dot(x2)
 
 # Harmonic Hamiltonian
 H0 = p2/2+x2/2
+AH0 = p2/2+x2/2 + x4
 E0 = LA.eigvalsh(H0)
+AE0 = LA.eigvalsh(AH0)
 #print('E0=',E0[:10])
 n = np.arange(dim)
 E0exact = n+1/2
-#H0diag = np.real(np.diag(H0))
+H0diag = np.real(np.diag(H0))
+AH0diag = np.real(np.diag(AH0))
 #print('E0=',H0diag[:10])
+#print('AE0=',AH0diag[:10])
 
 # plot eigenvalues vs n up to nmax
 nmax = 10
 if nmax>dim: nmax = dim
 n = np.arange(dim)
 plt.figure(num=None, figsize=(12,8), dpi=80, facecolor='w', edgecolor='k')
-plt.plot(n[:nmax], E0[:nmax], 'ro-', n[:nmax], E0exact[:nmax], 'go-')
+plt.plot(n[:nmax], AE0[:nmax], 'ro-', n[:nmax], E0exact[:nmax], 'go-')
 plt.xlabel('$n$')
 plt.ylabel('$E_n$')
 #plt.savefig('eigenvalues.pdf')

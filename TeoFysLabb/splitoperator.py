@@ -17,7 +17,7 @@ from matplotlib import animation
 from scipy.fftpack import fft,ifft,fftshift      # fast Fourier transforms
  
 # set x-axis scale
-N = 2**13    # choice suitable for fft
+N = 2**16    # choice suitable for fft
 dx = 0.1
 L = N*dx
 x = dx*(np.arange(N)-0.5*N)
