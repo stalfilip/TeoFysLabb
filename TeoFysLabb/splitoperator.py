@@ -28,7 +28,7 @@ k = -N*dk/2 + dk*np.arange(N)
 
 # time parameters  
 t = 0.0                         # start time
-dt = 0.01                       # time step
+dt = 0.005                       # time step
 tmax = 100.                    # max time
 nsteps = 50                     # number of time steps between frame updates
 frames = int(tmax/(nsteps*dt))
@@ -45,7 +45,7 @@ m = 1.0
 # parameters for the initial gaussian wave packet
 a = 8.0                         # width of gaussian
 x0 = -100.0                     # initial center position
-E = 1.0                         # energy
+E = 0.5                         # energy
 k0 = np.sqrt(2*m*E)/hbar        # wavevector of wavepacket motion
 print(k0,E) 
 
